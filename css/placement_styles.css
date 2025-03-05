@@ -450,6 +450,13 @@ details[open]>summary:before {
   z-index: -1;
   animation: bgInOut 5s infinite;
 }
+#faculty-profile td,
+#faculty-profile th {
+  padding: 5px !important;
+  /* Adjust this value as needed */
+  line-height: 1!important;
+  /* Reduce line spacing */
+}
 
 @keyframes bgInOut {
   0% {
@@ -522,6 +529,7 @@ details[open]>summary:before {
   animation: 50s slide infinite linear;
   animation-duration: 50s;
 }
+
 
 .company-logos-slide img {
   height: 50px;
