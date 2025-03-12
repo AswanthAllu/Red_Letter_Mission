@@ -57,92 +57,91 @@
 		
 </head>
 <style>
-    /* Styling for Carousel Controls */
-    .carousel-control-prev-icon,
-    .carousel-control-next-icon {
-      background-color: #b1040e; 
-    }
 
-    /* YouTube Video Styling */
-    .youtube-video {
-      width: 100%;
-      max-width: 500px; 
-      height: 250px; 
-      border: 3px solid #b1040e; 
-      border-radius: 10px; 
-    }
+/* Gallery Item */
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    height: 10rem; 
+}
 
-	
-	.gallery-item {
-            position: relative;
-            overflow: hidden;
-            border-radius: 8px;
-            height: 10rem; 
+.gallery-item img {
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover; 
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.05); 
+    opacity: 0.7;
+}
+
+.gallery-item:hover .gallery-overlay {
+    opacity: 1;
+}
+
+/* Overlay for gallery items */
+.gallery-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+	/* Image Styling */
+        .img-fluid {
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-bottom: 2rem;
+            animation: slideIn 1.5s ease-out;
         }
 
-        .gallery-item img {
-            width: 100%; 
-            height: 100%; 
-            object-fit: cover; 
-            transition: transform 0.3s ease, opacity 0.3s ease;
+        
+        p {
+            font-size: 1.125rem;
+            color: #333;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+            animation: fadeIn 2s ease-out;
         }
 
-        .gallery-item:hover img {
-            transform: scale(1.05); 
-            opacity: 0.7;
+        
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
         }
 
-        .gallery-item:hover .gallery-overlay {
-            opacity: 1;
+        @keyframes slideIn {
+            0% { transform: translateX(-50%); opacity: 0; }
+            100% { transform: translateX(0); opacity: 1; }
         }
 
-        .gallery-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: rgba(0, 0, 0, 0.4);
-            opacity: 0;
-            transition: opacity 0.3s ease;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .gallery-overlay i {
-            font-size: 1.5rem; 
-            color: white;
-            transition: transform 0.3s ease;
-        }
-
-        .gallery-item:hover .gallery-overlay i {
-            transform: scale(1.2);
-        }
-
-       
-        @media (max-width: 575px) {
-            .gallery-item {
-                height: 8rem; 
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
             }
-            .col-sm-6 {
-                flex: 0 0 50%; 
-                max-width: 50%; 
-            }
-        }
-
-    
-        @media (min-width: 576px) {
-            .gallery-item {
-                height: 10rem; 
+            p {
+                font-size: 1rem;
             }
         }
 
-        @media (min-width: 768px) {
-            .gallery-item {
-                height: 12rem;
-            }
+        .about-us-container {
+            padding: 3rem;
+            background-color: #f9f9f9;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
         }
+
   </style>
 
 <body>
@@ -151,7 +150,7 @@
 	<div class="wrapper m-0 ">
 
 		<!-- Sidebar -->
-		<nav class="sidebar side content-down">
+		<nav class="sidebar side content-down pt-5">
 
 			<!-- close sidebar menu -->
 			<div class="dismiss mb-4">
@@ -170,7 +169,7 @@
 
 			<ul class="list-unstyled components mb-5">
 				<li class="active">
-					<a onclick="
+					<a 
 						location.reload();
 						" data-toggle="tab">About Us</a>
 				</li>
@@ -998,134 +997,124 @@
 			<span>Details</span>
 			</div>
 		</a>
-
-
-		<div id="content" class=" my-5 p-0">
-			
-			<div class=" p-0 " id="nav-tabContent">
-				<div class="tab-pane fade show active" id="nav-department" role="tabpanel"
-					aria-labelledby="nav-department-tab">
-					<div class="row">
-						
-					
-						<div class="body1 bg-white" >
-							<div class="testimonal1 p-2 p-md-3 p-lg-5 m-0">
-								<div class="mainheading" style="margin-top: 6rem;">
-								<h1 class="text-light" >About Us</h1></div>
-								<article>
-									
-									<blockquote>
-										 <p align="justify">
-											Sri Vasavi Engineering College (SVEC), established in 2001, is renowned for providing high-quality technical education in Andhra Pradesh. 
-											The college offers diverse programs in engineering, pharmacy, and business administration and is ranked among the top 10 engineering colleges in the state. 
-											SVEC's infrastructure includes world-class laboratories, a comprehensive library, audio-visual classrooms, sports facilities, seminar halls, and more, which collectively create a conducive learning environment. The college boasts highly qualified faculty and has achieved NBA and NAAC accreditations, highlighting its superior facilities. Since becoming an autonomous institution in 2018, 
-											SVEC has been refining its curricula to meet industry demands.
-							</p><br><br>
-							
-							 <p align="justify">
-								SVEC has introduced new engineering courses in CST and ECT, alongside established programs in ECE, CSE, EEE, Mechanical, and Civil engineering. 
-								Its MBA wing aims to cultivate entrepreneurial skills among students, positioning itself as one of the best MBA programs in Andhra Pradesh. 
-								The college's placements division actively engages top multinational companies for recruitment drives, ensuring excellent job prospects for students. 
-								SVEC's NSS unit promotes discipline and civic responsibility, while its robust research and development initiatives foster technological innovation. 
-								Eco-friendly projects and practical exposure through pollution check centers, solar power generation, student-designed battery vehicles, and technical exhibitions further enhance the educational experience at SVEC.
-								</p><br><br>		
-									</blockquote>
-									
-								</article>
-							</div>
-
-						</div>
-					
-
-				</div>
-			</div>
+		<div class="container about-us-container">
+			<h1 class="text-center mb-4" style="color: #b1040e; margin-top: 100px; font-family: 'Arial', sans-serif; font-weight: bold;">About Us</h1>
 		</div>
 
-        <div class="container py-3">
-			<h2 class="text-center mb-3" style="color: #b1040e;">Explore Our Campus</h2>
-			<div class="container my-3">
-				<h4 class="text-center mb-4" style="text-decoration: underline;">College Campus Gallery</h4>
-				<div class="row">
-					<!-- Gallery Item 1 -->
-					<div class="col-md-4 col-sm-6 mb-4">
-						<div class="gallery-item">
-							<a href="../images/aboutus/CollegeBuilding.JPG" target="_blank">
-								<img src="../images/aboutus/CollegeBuilding.JPG" alt="Campus Image 1">
-								<div class="gallery-overlay">
-									<i class="bi bi-search"></i>
-								</div>
-							</a>
-						</div>
-					</div>
-					<!-- Gallery Item 2 -->
-					<div class="col-md-4 col-sm-6 mb-4">
-						<div class="gallery-item">
-							<a href="../images/aboutus/contactbg.jpg" target="_blank">
-								<img src="../images/aboutus/contactbg.jpg" alt="Campus Image 2">
-								<div class="gallery-overlay">
-									<i class="bi bi-search"></i>
-								</div>
-							</a>
-						</div>
-					</div>
-			
-					<!-- Gallery Item 3 -->
-					<div class="col-md-4 col-sm-6 mb-4">
-						<div class="gallery-item">
-							<a href="../images/aboutus/goddess.JPG" target="_blank">
-								<img src="../images/aboutus/goddess.JPG" alt="Campus Image 3">
-								<div class="gallery-overlay">
-									<i class="bi bi-search"></i>
-								</div>
-							</a>
-						</div>
-					</div>
-			
-					<!-- Gallery Item 4 -->
-					<div class="col-md-4 col-sm-6 mb-4">
-						<div class="gallery-item">
-							<a href="../images/aboutus/James Gosling Lab.jpg" target="_blank">
-								<img src="../images/aboutus/James Gosling Lab.jpg" alt="Campus Image 4">
-								<div class="gallery-overlay">
-									<i class="bi bi-search"></i>
-								</div>
-							</a>
-						</div>
-					</div>
-			
-					<!-- Gallery Item 5 -->
-					<div class="col-md-4 col-sm-6 mb-4">
-						<div class="gallery-item">
-							<a href="../images/aboutus/eee_CP LAB.jpg" target="_blank">
-								<img src="../images/aboutus/eee_CP LAB.jpg" alt="Campus Image 5">
-								<div class="gallery-overlay">
-									<i class="bi bi-search"></i>
-								</div>
-							</a>
-						</div>
-					</div>
-			
-					<!-- Gallery Item 6 -->
-					<div class="col-md-4 col-sm-6 mb-4">
-						<div class="gallery-item">
-							<a href="../images/aboutus/eee_EM-II LAB.jpg" target="_blank">
-								<img src="../images/aboutus/SPLab.jpg" alt="Campus Image 6">
-								<div class="gallery-overlay">
-									<i class="bi bi-search"></i>
-								</div>
-							</a>
-						</div>
-					</div>
-					
-				</div>
+		
+		<div class="row" style="margin-top: 0;">
+			<div class="col-md-6 text-center">
+				<img src="../images/aboutus/CollegeBuilding.JPG" alt="Sri Vasavi Engineering College" class="img-fluid rounded">
 			</div>
-			
-			<div class="container my-3">
-				<h4 class="text-center mb-4" style="text-decoration: underline;">Our College Virtual Tour</h4>
-			<div class="text-center mt-4">
-			  <iframe class="youtube-video" src="https://www.youtube.com/embed/AceQoPMnBBs"  allow="accelerometer; autoplay;" allowfullscreen></iframe>
+			<div class="col-md-6">
+				<p style="text-align: justify;">
+					Sri Vasavi Engineering College (SVEC), established in 2001, is renowned for providing high-quality technical education in Andhra Pradesh.
+					The college offers diverse programs in engineering, pharmacy, and business administration and is ranked among the top 10 engineering colleges in the state.
+					SVEC's infrastructure includes world-class laboratories, a comprehensive library, audio-visual classrooms, sports facilities, seminar halls, and more, creating a conducive learning environment.
+					The college boasts highly qualified faculty and has achieved NBA and NAAC accreditations, highlighting its superior facilities. Since becoming an autonomous institution in 2018,
+					SVEC has been refining its curricula to meet industry demands.
+				</p>
+				<p style="text-align: justify;">
+					SVEC has introduced new engineering courses in CST and ECT, alongside established programs in ECE, CSE, EEE, Mechanical, and Civil engineering.
+					Its MBA wing aims to cultivate entrepreneurial skills among students, positioning itself as one of the best MBA programs in Andhra Pradesh.
+					The college's placements division actively engages top multinational companies for recruitment drives, ensuring excellent job prospects for students.
+				</p>
 			</div>
+		</div>
+		
 
+		<!-- Explore Our Campus Section -->
+	<div class="container mb-1" style="padding-top: 0;">
+    <h2 class="text-center mb-1" style="color: #b1040e; font-size: 1.75rem;">Explore Our Campus</h2>
+    <div class="container my-3">
+        <h4 class="text-center mb-4" style="text-decoration: underline; font-size: 1.25rem;">College Campus Gallery</h4>
+        <div class="row">
+            <!-- Gallery Item 1 -->
+            <div class="col-md-4 col-sm-6 mb-4">
+                <div class="gallery-item">
+                    <a href="../images/aboutus/contactbg.jpg" target="_blank">
+                        <img src="../images/aboutus/contactbg.jpg" alt="Campus Image 1" class="img-fluid">
+                        <div class="gallery-overlay">
+                            <i class="bi bi-search"></i>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <!-- Gallery Item 2 -->
+            <div class="col-md-4 col-sm-6 mb-4">
+                <div class="gallery-item">
+                    <a href="../images/aboutus/goddess.JPG" target="_blank">
+                        <img src="../images/aboutus/goddess.JPG" alt="Campus Image 2" class="img-fluid">
+                        <div class="gallery-overlay">
+                            <i class="bi bi-search"></i>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <!-- Gallery Item 3 -->
+            <div class="col-md-4 col-sm-6 mb-4">
+                <div class="gallery-item">
+                    <a href="../images/aboutus/James Gosling Lab.jpg" target="_blank">
+                        <img src="../images/aboutus/James Gosling Lab.jpg" alt="Campus Image 3" class="img-fluid">
+                        <div class="gallery-overlay">
+                            <i class="bi bi-search"></i>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <!-- Gallery Item 4 -->
+            <div class="col-md-4 col-sm-6 mb-4">
+                <div class="gallery-item">
+                    <a href="../images/aboutus/eee_CP LAB.jpg" target="_blank">
+                        <img src="../images/aboutus/eee_CP LAB.jpg" alt="Campus Image 4" class="img-fluid">
+                        <div class="gallery-overlay">
+                            <i class="bi bi-search"></i>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <!-- Gallery Item 5 -->
+            <div class="col-md-4 col-sm-6 mb-4">
+                <div class="gallery-item">
+                    <a href="../images/aboutus/eee_EM-II LAB.jpg" target="_blank">
+                        <img src="../images/aboutus/eee_EM-II LAB.jpg" alt="Campus Image 5" class="img-fluid">
+                        <div class="gallery-overlay">
+                            <i class="bi bi-search"></i>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <!-- Gallery Item 6 -->
+            <div class="col-md-4 col-sm-6 mb-4">
+                <div class="gallery-item">
+                    <a href="../images/aboutus/eee_EM-II LAB.jpg" target="_blank">
+                        <img src="../images/aboutus/SPLab.jpg" alt="Campus Image 6" class="img-fluid">
+                        <div class="gallery-overlay">
+                            <i class="bi bi-search"></i>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+			
+				<h4 class="text-center mb-4" style="text-decoration: underline;">Our College Virtual Tour</h4>
+				<div class="container text-center mt-4">
+					<div class="embed-responsive embed-responsive-16by9" style="border: 3px solid #000; border-radius: 8px;">
+					  <iframe class="embed-responsive-item" 
+							  src="https://www.youtube.com/embed/NaKYczpszs0?autoplay=1&mute=0&si=EoZRz0ax4-Nhg6eF" 
+							  title="YouTube video player" 
+							  frameborder="0" 
+							  allow="accelerometer; autoplay; unmute;" 
+							  referrerpolicy="strict-origin-when-cross-origin" 
+							  allowfullscreen
+							  style="width: 100%; height: 100%; border: none;">
+					  </iframe>
+					</div>
+				  </div>
+				  
+				  
 		  
 		<!-- Footer -->
 
