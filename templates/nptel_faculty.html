@@ -228,6 +228,37 @@
                   </div>
                 </details>
                 <details >
+                  <summary>CSE(DS) Department</summary>
+                  <!-- Faculty Profile Table (Initially hidden) -->
+                  <div
+                    class="tab4-table"
+                    style="
+                      display: flex;
+                      justify-content: center;
+                      align-items: center;
+                    "
+                  >
+                    <table
+                      class="table table-bordered faculty-table mb-4 table-responsive table-striped table-hover"
+                      id="faculty-profile"
+                      class="tab4-table"
+                    >
+                      <thead>
+                        <tr class="tab4-tr" style="color: #343a40 !important">
+                          <th class="tab4-th">S.No.</th>
+                          <th class="tab4-th">Name of the Faculty</th>
+                          <th class="tab4-th">Academics Year</th>
+                          <th class="tab4-th">Certificate Name</th>
+                          <th class="tab4-th">Profile</th>
+                        </tr>
+                      </thead>
+                      <tbody class="faculty-body">
+
+                      </tbody>
+                    </table>
+                  </div>
+                </details>
+                <details >
                   <summary>AIML Department</summary>
                   <!-- Faculty Profile Table (Initially hidden) -->
                   <div
@@ -1059,19 +1090,19 @@
     <script>
       // Sample data
       const facultyDataDept = [
-          { id: 2, name: "Dr. A.B.C", qulaification: "M.Sc., Ph.D", certificate: "Associate Professor", profileLink: "../uploads/demo.pdf" },
-          { id: 3, name: "Dr. X.Y.Z", qulaification: "B.Tech., M.Tech", certificate: "Assistant Professor", profileLink: "../uploads/demo.pdf" },
-          { id: 4, name: "Dr. P.Q.R", qulaification: "M.Tech., Ph.D", certificate: "Professor", profileLink: "../uploads/demo.pdf" },
-          { id: 5, name: "Dr. L.M.N", qulaification: "B.Sc., M.Tech", certificate: "Lecturer", profileLink: "../uploads/demo.pdf" },
-          { id: 6, name: "Dr. S.T.U", qulaification: "M.Sc., Ph.D", certificate: "Senior Lecturer", profileLink: "../uploads/demo.pdf" }
+          { id: 1, name: "Dr. A.B.C", qulaification: "M.Sc., Ph.D", certificate: "Associate Professor", profileLink: "../uploads/demo.pdf" },
+          { id: 2, name: "Dr. X.Y.Z", qulaification: "B.Tech., M.Tech", certificate: "Assistant Professor", profileLink: "../uploads/demo.pdf" },
+          { id: 3, name: "Dr. P.Q.R", qulaification: "M.Tech., Ph.D", certificate: "Professor", profileLink: "../uploads/demo.pdf" },
+          { id: 4, name: "Dr. L.M.N", qulaification: "B.Sc., M.Tech", certificate: "Lecturer", profileLink: "../uploads/demo.pdf" },
+          { id: 5, name: "Dr. S.T.U", qulaification: "M.Sc., Ph.D", certificate: "Senior Lecturer", profileLink: "../uploads/demo.pdf" }
       ];
 
       const facultyDataYear = [
-          { id: 2, name: "Dr. A.B.C", department: "CSE", certificate: "Associate Professor", profileLink: "../uploads/demo.pdf" },
-          { id: 3, name: "Dr. X.Y.Z", department: "CSE(AI)", certificate: "Assistant Professor", profileLink: "../uploads/demo.pdf" },
-          { id: 4, name: "Dr. P.Q.R", department: "AIML", certificate: "Professor", profileLink: "../uploads/demo.pdf" },
-          { id: 5, name: "Dr. L.M.N", department: "ECE", certificate: "Lecturer", profileLink: "../uploads/demo.pdf" },
-          { id: 6, name: "Dr. S.T.U", department: "EEE", certificate: "Senior Lecturer", profileLink: "../uploads/demo.pdf" }
+          { id: 1, name: "Dr. A.B.C", department: "CSE", certificate: "Associate Professor", profileLink: "../uploads/demo.pdf" },
+          { id: 2, name: "Dr. X.Y.Z", department: "CSE(AI)", certificate: "Assistant Professor", profileLink: "../uploads/demo.pdf" },
+          { id: 3, name: "Dr. P.Q.R", department: "AIML", certificate: "Professor", profileLink: "../uploads/demo.pdf" },
+          { id: 4, name: "Dr. L.M.N", department: "ECE", certificate: "Lecturer", profileLink: "../uploads/demo.pdf" },
+          { id: 5, name: "Dr. S.T.U", department: "EEE", certificate: "Senior Lecturer", profileLink: "../uploads/demo.pdf" }
       ];
 
       // Function to add rows to all tables with the class 'faculty-body'

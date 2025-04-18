@@ -24,106 +24,101 @@
             content: '';
             position: absolute;
             top: 68%;
-            
             left: 0px;
             border: solid transparent;
             border-width: 14px;
             border-top-color: #b1040e;
             transform: translateX(-50%) rotate(-270deg);
         }
-        .button-color{
+
+        .button-color {
             background-color: #b1040e;
             color: white;
         }
-        .button-div{
+
+        .button-div {
             text-align: right;
         }
-        .card{
+
+        .card {
             border-color: #fff;
         }
+
+        /* Scrollable News Section */
         .scrollable-text-container {
-    max-height: 200px ; /* Adjust this value according to your needs */
-    overflow: hidden;
-}
+            max-height: 200px; /* Set height to fit content */
+            overflow: hidden;
+            position: relative;
+        }
 
-.scrollable-text {
-    animation: scroll-up 10s linear infinite; /* Adjust duration and timing function as needed */
-    margin-top: 10px;
-    font-size: 0.9375rem;
+        .scrollable-text {
+            display: flex;
+            flex-direction: column;
+            animation: scroll-up 10s linear infinite;
+            font-size: 0.9375rem;
+        }
 
-}
+        .scrollable-text-container:hover .scrollable-text {
+            animation-play-state: paused;
+        }
 
-.scrollable-text-container:hover .scrollable-text {
-    animation-play-state: paused;
-}
-
-
-@keyframes scroll-up {
-    0% {
-        transform: translateY(5%);
-    }
-    100% {
-        transform: translateY(-80%);
-    }
-}
-
-
+        @keyframes scroll-up {
+            0% {
+                transform: translateY(100%);
+            }
+            100% {
+                transform: translateY(-100%);
+            }
+        }
     </style>
 </head>
 <body>
 
 <div class="container mt-5">
     <div class="row">
-        <!-- Card 1 -->
-        <div class="col-12 col-md-6 position-relative pt-3 shadow ">
+        <!-- Card 1 - News Section -->
+        <div class="col-12 col-md-6 position-relative pt-3 shadow">
             <!-- Ribbon for Card 1 -->
-            <div class="ribbon ">News</div>
-            <div class="card">
-                <div class="card-body">
-                    <h5 class="card-title mt-5">News Headline</h5>
-<ul>
-    <li>Congratulations for getting NAAC A in the second cycle of NAAC Peer review</li>
-    <li>Amadeus Grabs Vasavians at 13LPA!! </li>
-    <li>E-waste Management has been started </li>
-    <li>Vasavi has the vision studio for the pictorification of brilliant ideas</li>
-</ul>                 
-
-                </div>
-            </div>
-        </div>
-
-        <!-- Card 2 -->
-        <div class="col-12 col-md-6 position-relative pt-3 shadow ">
-            <!-- Ribbon for Card 2 -->
-            <div class="ribbon ">Results</div>
+            <div class="ribbon">News</div>
             <div class="card">
                 <div class="card-body">
                     <div class="scrollable-text-container">
                         <ul class="scrollable-text">
-                            <li>Btech V20 VI Sem Regular and Supplymentry - <span class="text-danger">click</span></li>
-                            <li>Btech V20 VI Sem Regular and Supplymentry - <span class="text-danger">click</span></li>
-                            <li>Btech V20 VI Sem Regular and Supplymentry - <span class="text-danger">click</span></li>
-                            <li>Btech V20 VI Sem Regular and Supplymentry - <span class="text-danger">click</span></li>
-                            <li>Btech V20 VI Sem Regular and Supplymentry - <span class="text-danger">click</span></li>
-                            <li>Btech V20 VI Sem Regular and Supplymentry - <span class="text-danger">click</span></li>
-                            <li>Btech V20 VI Sem Regular and Supplymentry - <span class="text-danger">click</span></li>
-                            <li>Btech V20 VI Sem Regular and Supplymentry - <span class="text-danger">click</span></li>
-                            <li>Btech V20 VI Sem Regular and Supplymentry - <span class="text-danger">click</span></li>
-                            <li>Btech V20 VI Sem Regular and Supplymentry - <span class="text-danger">click</span></li>
-                            <li>Btech V20 VI Sem Regular and Supplymentry - <span class="text-danger">click</span></li>
-                            <li>Btech V20 VI Sem Regular and Supplymentry - <span class="text-danger">click</span></li>
-                            <li>Btech V20 VI Sem Regular and Supplymentry - <span class="text-danger">click</span></li>
-                            <li>Btech V20 VI Sem Regular and Supplymentry - <span class="text-danger">click</span></li>
-                            <li>Btech V20 VI Sem Regular and Supplymentry - <span class="text-danger">click</span></li>
-                            <li>Btech V20 VI Sem Regular and Supplymentry - <span class="text-danger">click</span></li>
-                            <li>Btech V20 VI Sem Regular and Supplymentry - <span class="text-danger">click</span></li>
-                            <li>Btech V20 VI Sem Regular and Supplymentry - <span class="text-danger">click</span></li>
-                            <li>Btech V20 VI Sem Regular and Supplymentry - <span class="text-danger">click</span></li>
-                            <li>Btech V20 VI Sem Regular and Supplymentry - <span class="text-danger">click</span></li>
-                            <li>Btech V20 VI Sem Regular and Supplymentry - <span class="text-danger">click</span></li>
-                            <li>Btech V20 VI Sem Regular and Supplymentry - <span class="text-danger">click</span></li>
+                            <li> Congratulations for getting NAAC A in the second cycle of NAAC Peer review</li>
+                            <li> Amadeus Grabs Vasavians at 13LPA!!</li>
+                            <li> E-waste Management has been started</li>
+                            <li> Vasavi has the vision studio for the pictorification of brilliant ideas</li>
+                            <li> New startup incubator for student entrepreneurs!</li>
+                            <li> Library extends hours for exam preparation</li>
+                            <li> AI-powered projects showcased in tech fest</li>
+                            <li> Internship opportunities announced for top companies</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-                        </ul>                    </div>                    
+        <!-- Card 2 - Results Section -->
+        <div class="col-12 col-md-6 position-relative pt-3 shadow">
+            <!-- Ribbon for Card 2 -->
+            <div class="ribbon">Results</div>
+            <div class="card">
+                <div class="card-body">
+                    <div class="scrollable-text-container">
+                        <ul class="scrollable-text">
+                            <li>Btech V20 VI Sem Regular and Supplementary - <span class="text-danger">click</span></li>
+                            <li>Btech V20 VI Sem Regular and Supplementary - <span class="text-danger">click</span></li>
+                            <li>Btech V20 VI Sem Regular and Supplementary - <span class="text-danger">click</span></li>
+                            <li>Btech V20 VI Sem Regular and Supplementary - <span class="text-danger">click</span></li>
+                            <li>Btech V20 VI Sem Regular and Supplementary - <span class="text-danger">click</span></li>
+                            <li>Btech V20 VI Sem Regular and Supplementary - <span class="text-danger">click</span></li>
+                            <li>Btech V20 VI Sem Regular and Supplementary - <span class="text-danger">click</span></li>
+                            <li>Btech V20 VI Sem Regular and Supplementary - <span class="text-danger">click</span></li>
+                            <li>Btech V20 VI Sem Regular and Supplementary - <span class="text-danger">click</span></li>
+                            <li>Btech V20 VI Sem Regular and Supplementary - <span class="text-danger">click</span></li>
+                            <li>Btech V20 VI Sem Regular and Supplementary - <span class="text-danger">click</span></li>
+                        </ul>
+                    </div>                    
                 </div>
             </div>
         </div>

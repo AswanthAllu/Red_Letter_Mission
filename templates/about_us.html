@@ -57,7 +57,9 @@
 		
 </head>
 <style>
-
+body{
+	padding: 10px;
+}
 /* Gallery Item */
 .gallery-item {
     position: relative;
@@ -141,19 +143,26 @@
             border-radius: 15px;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
         }
+		@media (orientation:portrait){
+			.arrow-margin{
+				margin-top:70px;
+				
+
+			}
+		}
 
   </style>
 
-<body>
+<body >
     <div id="header"></div>
 	<!-- Wrapper -->
 	<div class="wrapper m-0 ">
 
 		<!-- Sidebar -->
-		<nav class="sidebar side content-down pt-5">
+		<nav class="sidebar side content-down ">
 
 			<!-- close sidebar menu -->
-			<div class="dismiss mb-4">
+			<div class="dismiss arrow-margin" >
 				<i class="fas fa-arrow-left"></i>
 			</div>
 
@@ -1022,10 +1031,24 @@
 			</div>
 		</div>
 		
+	<!--college video-->
+	<h2 class="text-center mb-1 mt-5" style="color: #b1040e; font-size: 1.75rem;font-weight: bolder; margin-top:100px !important;">Explore Our Campus</h2>
 
-		<!-- Explore Our Campus Section -->
+	<div class="container text-center mt-4">
+		<div class="embed-responsive embed-responsive-16by9" style="border: 3px solid #000; border-radius: 8px;">
+			<iframe class="embed-responsive-item" 
+					src="https://www.youtube.com/embed/NaKYczpszs0?autoplay=1&mute=1&si=EoZRz0ax4-Nhg6eF" 
+					title="YouTube video player" 
+					frameborder="0" 
+					allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+					referrerpolicy="strict-origin-when-cross-origin" 
+					allowfullscreen
+					style="width: 100%; height: 100%; border: none;">
+			</iframe>
+		</div>
+	</div>
+		<!-- Explo,re Our Campus Section -->
 	<div class="container mb-1" style="padding-top: 0;">
-    <h2 class="text-center mb-1" style="color: #b1040e; font-size: 1.75rem;">Explore Our Campus</h2>
     <div class="container my-3">
         <h4 class="text-center mb-4" style="text-decoration: underline; font-size: 1.25rem;">College Campus Gallery</h4>
         <div class="row">
@@ -1099,21 +1122,7 @@
     </div>
 </div>
 			
-				<h4 class="text-center mb-4" style="text-decoration: underline;">Our College Virtual Tour</h4>
-				<div class="container text-center mt-4">
-					<div class="embed-responsive embed-responsive-16by9" style="border: 3px solid #000; border-radius: 8px;">
-					  <iframe class="embed-responsive-item" 
-							  src="https://www.youtube.com/embed/NaKYczpszs0?autoplay=1&mute=0&si=EoZRz0ax4-Nhg6eF" 
-							  title="YouTube video player" 
-							  frameborder="0" 
-							  allow="accelerometer; autoplay; unmute;" 
-							  referrerpolicy="strict-origin-when-cross-origin" 
-							  allowfullscreen
-							  style="width: 100%; height: 100%; border: none;">
-					  </iframe>
-					</div>
-				  </div>
-				  
+				
 				  
 		  
 		<!-- Footer -->
