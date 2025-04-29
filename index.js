@@ -324,3 +324,32 @@ function topFunction() {
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
 }
+
+
+// Show button when user scrolls down
+window.onscroll = function() {
+  scrollFunction();
+};
+
+function scrollFunction() {
+  const mybutton = document.getElementById("myBtn");
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+//FOR POPUPS
+window.addEventListener('load', function () {
+  var placementModal = new bootstrap.Modal(document.getElementById('placementModal'));
+  placementModal.show();
+
+  // Cleanup backdrop manually when modal is hidden
+  var modalElement = document.getElementById('placementModal');
+  modalElement.addEventListener('hidden.bs.modal', function () {
+    document.querySelectorAll('.modal-backdrop').forEach(el => el.remove());
+    document.body.classList.remove('modal-open');
+    document.body.style = ''; // Remove overflow:hidden etc.
+  });
+});

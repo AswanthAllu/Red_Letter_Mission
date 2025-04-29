@@ -32,6 +32,11 @@
       href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css"
       rel="stylesheet"
     />
+     <!-- popups animations-->
+    <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+/>
     <!-- testimonials externals ends here -->
     <!-- JavaScript -->
     <link
@@ -81,7 +86,14 @@
   </head>
 
   <body>
-    <button onclick="topFunction()" id="myBtn" title="Go to top">➤</button>
+    <button 
+    onclick="topFunction()" 
+    id="myBtn" 
+    title="Go to top"
+    style="display:none; position:fixed; bottom:30px; right:30px; z-index:99; font-size:24px; background-color:#b1040e; color:white; border:none; padding:10px 15px; border-radius:50%; cursor:pointer; box-shadow:0 4px 8px rgba(0,0,0,0.2);"
+  >➤</button>
+  
+  
     <div class="fixed-top">
       <nav class="navbar navbar-expand-lg bg-color nav-elements-large">
         <div class="container-fluid">
@@ -1151,60 +1163,58 @@
             <div class="col-12">
               <div id="newsAndEvents"></div>
             </div>
-            <div class="col-xs-12 col-sm-6 col-lg-4 mt-3">
-              <div class="card shadow">
-                <img
-                  src="./images/accenture-logo.png"
-                  class="card-img-top"
-                  alt="Sunset Over the Sea"
-                />
-                <div class="card-body">
-                  <h5 class="card-title text-center">
-                    Accenture hires Vasavians
-                  </h5>
-                  <p class="card-text">
-                    Congratulations!! to the Vasavians who got placed in
-                    Accenture. We are proud of you.
-                  </p>
-                </div>
+           
+            </div>
+          </div>
+        </div>
+      </div>
+
+<!-- Placements Popup Modal -->
+<div class="modal fade" id="placementModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content p-4">
+      <div class="modal-header border-0">
+        <h4 class="modal-title w-100 text-center">Placements Celebration 🎉</h4>
+        <button type="button" class="btn btn-success" style="background-color: #b1040e; position: absolute; right: 10px; top: 10px; z-index: 1050;" data-bs-dismiss="modal">X</button>
+      </div>
+      <div class="modal-body">
+        <div class="row g-4">
+          <div class="col-md-4 animate__animated animate__fadeInLeft">
+            <div class="card shadow-sm border-0">
+              <img src="./images/Untitled design_page-0001.jpg" class="card-img-top p-3" alt="Hexaware" />
+              <div class="card-body text-center">
+                <h5 class="card-title">Hexaware hires Vasavians</h5>
+                <p class="card-text small">Congratulations!! We are proud of you.</p>
               </div>
             </div>
-            <div class="col-xs-12 col-sm-6 col-lg-4 mt-3">
-              <div class="card shadow">
-                <img
-                  src="./images/Deloitte_Logo.jpg"
-                  class="card-img-top"
-                  alt="Sunset Over the Sea"
-                />
-                <div class="card-body text-center">
-                  <h5 class="card-title text-center">Deloitte hires Vasavians</h5>
-                  <p class="card-text">
-                    Congratulations!! to the Vasavians who got placed in Deloitte.
-                    We are proud of you.
-                  </p>
-                </div>
+          </div>
+          <div class="col-md-4 animate__animated animate__fadeInUp">
+            <div class="card shadow-sm border-0">
+              <img src="./images/Deloitte_Logo.jpg" class="card-img-top p-3" alt="Deloitte" />
+              <div class="card-body text-center">
+                <h5 class="card-title">Deloitte hires Vasavians</h5>
+                <p class="card-text small">Congratulations!! We are proud of you.</p>
               </div>
             </div>
-  
-            <div class="col-xs-12 col-sm-6 col-lg-4 mt-3">
-              <div class="card shadow">
-                <img
-                  src="./images/Untitled design_page-0001.jpg"
-                  class="card-img-top"
-                  alt="Sunset Over the Sea"
-                />
-                <div class="card-body">
-                  <h5 class="card-title text-center">Hexaware hires Vasavians</h5>
-                  <p class="card-text">
-                    Congratulations!! to the Vasavians who got placed in Hexaware.
-                    We are proud of you.
-                  </p>
-                </div>
+          </div>
+          <div class="col-md-4 animate__animated animate__fadeInRight">
+            <div class="card shadow-sm border-0">
+              <img src="./images/accenture-logo.png" class="card-img-top p-3" alt="Accenture" />
+              <div class="card-body text-center">
+                <h5 class="card-title">Accenture hires Vasavians</h5>
+                <p class="card-text small">Congratulations!! We are proud of you.</p>
               </div>
             </div>
           </div>
         </div>
       </div>
+      <div class="modal-footer border-0 justify-content-center">
+        <!-- Optional Footer -->
+      </div>
+    </div>
+  </div>
+</div>
+
 
       <!-- news ends here  -->
          <!-- events section starts here-->
@@ -1756,17 +1766,7 @@
                   <div class="slide swiper-slide">
                     <img src="testinomy_images/kiran_maruthi_kuna.png" alt="" class="image" />
                     <p>
-                      I am proud to be an alumnus of Sri Vasavi Engineering College, where I earned my Computer Science Engineering degree.
-
-                      The unwavering support from my HOD, faculty, and placement cell played a key role in shaping my journey. They helped me explore leadership, various tech stacks, and career opportunities.
-                      
-                      During my time at SVEC, I had the opportunity to host hackathons and technical fests, while also developing quiz platforms and study repositories. These experiences fueled my passion for technology.
-                      
-                      The college’s guidance and training helped me secure a Software Engineer role at Hexaware Technologies, setting a strong foundation for my career.
-                      
-                      Beyond academics, SVEC was a place where I built lifelong friendships and unforgettable memories.
-                      
-                      I’m grateful for my journey here and excited to see the college continue to inspire future engineers.
+                      I am proud to be an alumnus of Sri Vasavi Engineering College, where I completed my Computer Science Engineering degree. The constant support from my HOD, faculty, and placement cell helped me explore leadership roles, diverse tech stacks, and career opportunities. At SVEC, I hosted hackathons, built quiz platforms, and developed study repositories, which fueled my passion for technology and secured my role at Hexaware Technologies.
                     </p>
 
                     <i class="bx bxs-quote-alt-left quote-icon"></i>
@@ -1779,8 +1779,7 @@
                   <div class="slide swiper-slide">
                     <img src="testinomy_images/mohith_kumar.jpg" alt="" class="image" />
                     <p>
-                      I have studied by bachelors in computer science at Sri Vasavi Engineering college. I had my best educational and personal experience in my life at SVEC. Even though there are best Engineering colleges in my hometown, SVEC caught my eyes as it has better discipline and educational culture that others don’t have. Throughout my bachelors career I’m really grateful to all teaching and non teaching staff. I was in men’s hostel for 3 long years and it was the greatest experience for me. My most favourite place will be cricket ground playing with my seniors and juniors and with my friends. I recommend to join in SVEC rather than joining other colleges which has only the name big but not the important aspects that has to be in educational department. I’m really thankful to the whole team of SRI VASAVI ENGINEERING COLLEGE
-              
+                      I pursued my Bachelor's in Computer Science at Sri Vasavi Engineering College, where I had the best educational and personal experiences of my life. SVEC stood out for its discipline and academic culture. I’m grateful to all the teaching and non-teaching staff. My three years in the men's hostel and playing cricket with friends remain unforgettable. I wholeheartedly recommend SVEC for true educational value.
                     </p>
 
                     <i class="bx bxs-quote-alt-left quote-icon"></i>
@@ -1792,13 +1791,7 @@
                   </div>
                   <div class="slide swiper-slide">
                     <img src="testinomy_images/srikanth.jpeg" alt="" class="image" />
-                    <p>Sri Vasavi Engineering College has been a truly transformative part of my journey, laying the strong foundation that continues to support me even today. It's been 7 years since I graduated, and I’m currently working as a Software Architect—but I still leverage the core principles and foundational knowledge I gained during my college days.
-
-                      The faculty at Vasavi were incredibly supportive, providing not just theoretical knowledge but also practical insights that shaped my thinking and problem-solving approach. The college encouraged us to explore, ask questions, and participate in technical and non-technical events, helping us become confident and industry-ready.
-                      
-                      The infrastructure is well-maintained, with modern labs, a great library, and a peaceful environment for learning. The management consistently works to enhance the quality of education and student experience.
-                      
-                      Sri Vasavi Engineering College played a key role in shaping who I am today, and I’m always proud to be an alumnus. It’s an excellent choice for anyone looking to build a solid engineering career.
+                    <p>Sri Vasavi Engineering College laid the strong foundation for my journey. Seven years after graduation, now working as a Software Architect, I still rely on the core principles learned there. With supportive faculty, modern infrastructure, and a focus on both academics and personal growth, SVEC shaped my confidence and skills. I'm proud to be an alumnus and highly recommend it for aspiring engineers.
                         </p>
 
                     <i class="bx bxs-quote-alt-left quote-icon"></i>
