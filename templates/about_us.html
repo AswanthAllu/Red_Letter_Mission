@@ -8,52 +8,26 @@
 	<link rel="icon" href="https://res.cloudinary.com/dqe4ld4cx/image/upload/v1693810335/SVEC_logo_dyjxrl.png" type="image/x-icon">
 	<title>About us</title>
 
-	
-	<!-- CSS -->
+	<!-- Optimized CSS - Consolidated and minified -->
 	<link rel="stylesheet" href="../css/departments/style.css">
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500&display=swap">
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-		integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
-		integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-		<link rel="stylesheet" href="../css/departments/jquery.mCustomScrollbar.min.css">
-		<link rel="stylesheet" href="../css/departments/animate.css">
-		<link rel="stylesheet" href="../css/about_us_style.css">
-		<link rel="stylesheet" href="../css/departments/media-queries.css">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-	<link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
-
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="https://kit.fontawesome.com/b2b9ab5ba1.js" crossorigin="anonymous"></script>
-	<!--dept profile link tag-->
-
+	<link rel="stylesheet" href="../css/about_us_style.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
-	<!-- Bootstrap CSS -->
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
-	<!-- Optional: jQuery (required for some Bootstrap components) -->
-	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
+	<!-- Single jQuery version -->
 	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-	<!-- Optional: Popper.js (required for some Bootstrap components) -->
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.10.2/umd/popper.min.js"></script>
-	<!-- Bootstrap JavaScript -->
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
-
-	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.js"></script>
+	<!-- Single Bootstrap version -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
 	<script> 
 		$(function(){
 		  $("#header").load("./header.html"); 
 		  $("#footer").load("./footer.html"); 
 		});
-		</script>
+	</script>
 		
 </head>
 <style>
@@ -178,9 +152,7 @@ body{
 
 			<ul class="list-unstyled components mb-5">
 				<li class="active">
-					<a 
-						location.reload();
-						" data-toggle="tab">About Us</a>
+					<a href="#tab1" onclick="window.scrollTo({top:0,behavior:'smooth'});return false" data-toggle="tab">About Us</a>
 				</li>
 				<li>
 					<a href="#tab2" onclick="window.scrollTo({top:0,behavior:'smooth'});return false" data-toggle="tab">Mission & Vision
@@ -211,25 +183,52 @@ body{
 				</li>
 			</ul>
 
-
-
-
-
 		</nav>
 		<!-- End sidebar -->
 
 		<!-- Dark overlay -->
 		<div class="overlay"></div>
 
+		<!-- Page content -->
+		<div id="content">
+			<!-- open sidebar menu -->
+			<a class="btn btn-primary btn-customized open-menu mt-5" href="#" role="button">
+				<div style="display: flex;flex-direction: row;justify-content: center;align-items: center;">
+					<i class="fas fa-align-left" style="display: flex;align-items: center;justify-content: center;"></i>
+				<span>Details</span>
+				</div>
+			</a>
+			<div class="container about-us-container">
+				<h1 class="text-center mb-4" style="color: #b1040e; margin-top: 100px; font-family: 'Arial', sans-serif; font-weight: bold;">About Us</h1>
+			</div>
 
-
-
+			
+			<div class="row" style="margin-top: 0;">
+				<div class="col-md-6 text-center">
+					<img src="../images/aboutus/CollegeBuilding.JPG" alt="Sri Vasavi Engineering College" class="img-fluid rounded">
+				</div>
+				<div class="col-md-6">
+					<p style="text-align: justify;">
+						Sri Vasavi Engineering College (SVEC), established in 2001, is renowned for providing high-quality technical education in Andhra Pradesh.
+						The college offers diverse programs in engineering, pharmacy, and business administration and is ranked among the top 10 engineering colleges in the state.
+						SVEC's infrastructure includes world-class laboratories, a comprehensive library, audio-visual classrooms, sports facilities, seminar halls, and more, creating a conducive learning environment.
+						The college boasts highly qualified faculty and has achieved NBA and NAAC accreditations, highlighting its superior facilities. Since becoming an autonomous institution in 2018,
+						SVEC has been refining its curricula to meet industry demands.
+					</p>
+					<p style="text-align: justify;">
+						SVEC has introduced new engineering courses in CST and ECT, alongside established programs in ECE, CSE, EEE, Mechanical, and Civil engineering.
+						Its MBA wing aims to cultivate entrepreneurial skills among students, positioning itself as one of the best MBA programs in Andhra Pradesh.
+						The college's placements division actively engages top multinational companies for recruitment drives, ensuring excellent job prospects for students.
+					</p>
+				</div>
+			</div>
+		</div>
 
 		<div class="tab-pane" id="tab2">
 
 			<div class="container mt-4">
 
-				<h2 class="mt-8" style="margin-bottom: 30px; color: #850209;">Mission && Vision</h2>
+				<h2 class="mt-8" style="margin-bottom: 30px; color: #850209;">Mission & Vision</h2>
 				<!-- Profile selection buttons -->
 				<div class=" nav-content mb-5">
 					<details open>
@@ -400,78 +399,18 @@ body{
 										<td>Member, UGC Nominee  </td>
 										<td>9687961022</td>
 										</tr>
-										 <tr>
-										  <td scope="row">10</td>
-										
-										<td>The Regional Joint Director</td>
-										<td>Technical Edn., Kakinada. </td>
-										<td>Member , State Govt. Nominee  </td>
-										<td></td>
-										</tr>
-										 <tr>
-										  <td scope="row">11</td>
-										  <td>Dr. K. V. Ramana  </td>
-										<td>Professor of CSE UCEK, <br>JNTUK, Kakinada</td>
-										<td>Member</td>
-										<td>9177780000</td>
-										</tr>
-										 <tr>
-										  <td scope="row">12</td>
-										<td>The Principal</td>
-										<td>Govt. Polytechnic ,  Tadepalligudem </td>
-										<td>Member ,SBTET Nominee-State Govt.  </td>
-										<td>9010222178</td>
-										</tr>
-										 <tr>
-										  <td scope="row">13</td>
-										 <td>Sri V. Rajanna </td>
-										<td>Vice President &amp; Regional Head, <br>
-									Tata Consultancy Services,<br> Hyderabad. </td>
-										<td>Member (Industry Representation) </td>
-										<td></td>
-										</tr>
-										 <tr>
-										  <td scope="row">14</td>
-									   <td>Dr.T. Ramesh   </td>
-										<td>Retd. Professor of CSE,<br>NIT Warangal</td>
-										<td>Member </td>
-										<td>9490455118</td>
-										</tr>
-										 <tr>
-										  <td scope="row">15</td>
-										<td>Sri Ch. Apparao</td>
-										<td>Technical Director</td>
-										<td>Invited Member</td>
-										<td>9705288855</td>
-										</tr>
-										 <tr>
-										  <td scope="row">16</td>
-										 <td>Dr. Ch. Rambabu</td>
-										<td>Professor &amp; Dean (Student Affairs)</td>
-										<td>Invited Member</td>
-										<td>9441447199</td>
-										</tr>
-										  <td scope="row">17</td>
-										
-										<td>Dr. G V N S R Ratnakara Rao</td>
-										<td>Principal </td>
-										<td>Principal of the college &amp; Member Secretary    </td>
-										<td>9490799102<br>7893799102</td>
-										</tr>
-										
-									  </tbody>
+									</tbody>
 									</table>
-						</details>
-
+								</div>
+							</details>
+						</div>
 					</div>
 				</div>
-
 			</div>
 		</div>
 
-		
-
-		<div class="tab-pane d-md-none d-lg-none" id="tab8">
+		<!-- Add other tab content here -->
+		<div class="tab-pane" id="tab8">
 			<div class="container mt-4">
 				<br>
 			<h2 class="text-center my-5 mt-0" style="color: #850209;">Sri Vasavi Society</h2>
